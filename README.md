@@ -1,11 +1,12 @@
 Landing page for Inlab
 
-short link: https://bit.ly/inlab_landing
+link: https://ngelab.github.io
+short link: -
 
 feedback/google form: https://bit.ly/inlab_form
 
-QR code: https://bit.ly/inlab_landing_qr
+QR code: -
 
 ---Heroku---
-https://landing-inlab.herokuapp.com/
-short link: https://bit.ly/landing_inlab
+https://ngelab-landing.herokuapp.com/
+short link: -

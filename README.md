@@ -3,7 +3,7 @@ Landing page for Ngelab
 link: https://ngelab.github.io
 short link: https://bit.ly/ngelab_landing
 
-feedback/google form: https://bit.ly/inlab_form (pakai email lama)
+feedback/google form: https://bit.ly/form_ngelabv2 (pakai email lama)
 
 QR code: https://github.com/ngelab/ngelab.github.io/blob/main/assets/images/free-qr.png
 

@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="assets/css/animated.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/btn3d.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/toast.css">
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -78,7 +80,7 @@ https://templatemo.com/tm-565-onix-digital -->
               <!-- <li class="scroll-to-section"><a href="#portfolio">Portfolio</a></li>
               <li class="scroll-to-section"><a href="#video">Videos</a></li>  -->
               <li class="scroll-to-section"><a href="#contact">Contact Us</a></li> 
-              <li class="scroll-to-section"><div class="main-red-button-hover"><button type="button" id="form-submit" onclick="toWA()" style="background-color: #1DACE2;color:white;border-radius: 1.1em;padding: 8px 20px;border: none;font-weight: 400;">Contact Us Now</button></div></li> 
+              <li class="scroll-to-section"><div class="main-red-button-hover"><button type="button" id="joinUs" onclick="toWA()" style="background-color: #1DACE2;color:white;border-radius: 1.1em;padding: 8px 20px;border: none;font-weight: 400;">Contact Us Now</button></div></li>			  
               <!-- <li class="scroll-to-section"><div class="main-red-button-hover"><a target="new" href="https://wa.me/6283805555280">Contact Us Now</a></div></li> -->
             </ul>        
             <a class='menu-trigger'>
@@ -658,7 +660,7 @@ https://templatemo.com/tm-565-onix-digital -->
           </div>
         </div>
         <div class="col-lg-5 align-self-center">
-          <form id="contact" action="" method="get" class="px-4">
+          <form id="contact" action="" method="get" class="px-4 pb-0">
             <div class="row">
               <!--<div class="col-lg-12">
                 <fieldset>
@@ -678,10 +680,27 @@ https://templatemo.com/tm-565-onix-digital -->
               <div class="col-lg-12">
                 <fieldset>
                   <!--input type="text" name="pesan" id="pesan" placeholder="Pesan" required=""-->
-			<p style="text-align: center; margin-bottom: 30px; font-size: 18px;">Kami akan segera hadir, terutama untuk lab di area Malang.</p>
-  			<p style="text-align: center; margin-bottom: 30px; font-size: 18px;">Daftarkan diri anda lebih awal dan berikan kami masukan.</p>
+			<p style="text-align: center; margin-bottom: 0px; font-size: 18px;">Kami akan segera hadir, terutama untuk lab di area Malang.</p>
+  			<p style="text-align: center; margin-bottom: 0px; font-size: 18px;">Daftarkan diri anda lebih awal dan berikan kami masukan.</p>
                 </fieldset>
               </div>
+			<div class="col-lg-12 d-flex justify-content-center">  
+			  <div class="input-group" style="text-align: center;width:50%;">
+					<input type="text" class="input-area" required id="inputFieldNama" />
+					<label for="inputFieldNama" class="label">Nama</label>
+			  </div>
+			</div>
+			<div class="col-lg-12 d-flex justify-content-center">  
+			  <div class="input-group" style="text-align: center;width:50%;">
+					<input type="text" class="input-area" required id="inputFieldEmail" />
+					<label for="inputFieldEmail" class="label">E-mail</label>
+			  </div>
+			</div>
+			<div class="col-lg-12 d-flex justify-content-center">
+				<div class="form-group shadow-textarea" style="width: 88%;">
+					<textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Catatan dan saran (opsional)"></textarea>
+				</div>
+			</div>
               <div style="text-align: center; margin-bottom: 30px;" class="col-lg-12 px-0">  
 		<p>klik di sini untuk request kebutuhan lab-mu</p>
   		<div class="container px-0">
@@ -692,7 +711,12 @@ https://templatemo.com/tm-565-onix-digital -->
                 		<fieldset>
                   		<!--button type="submit" id="form-submit" onclick="toWA()" class="main-button">Submit Request</button-->
                    
-		  		<button id="form-submit" class="btn btn-primary btn-lg btn3d" style="background-color: #1DACE2;color:white;border-radius: 1.1em;padding: 8px 20px;border: none;font-weight: 400;font-size: 30px;" onclick="toForm()"><b>Join Us</b></button>
+		  		<!--<button id="form-submit" class="btn btn-primary btn-lg btn3d" style="background-color: #1DACE2;color:white;border-radius: 1.1em;padding: 8px 20px;border: none;font-weight: 400;font-size: 30px;" onclick=""><b>Join Us</b></button>-->
+				<div id="snackbar">Disimpan. Terima Kasih :)</div>
+				<div  id="JoinUs" class="btn btn-primary btn-lg btn3d" style="background-color: #1DACE2;color:white;border-radius: 1.1em;padding: 8px 20px;border: none;font-weight: 400;font-size: 30px;" onclick="">
+                      <b>Join Us</b>
+                </div>
+				<input type="submit" id="JoinUs2" name="signup_submit" value="Delete" />
                 	`     
                 		</fieldset>
     				</div>
@@ -797,13 +821,15 @@ https://templatemo.com/tm-565-onix-digital -->
   <script src="assets/js/custom.js"></script>
 
   <script>
+  
     function toWA() {
       window.open("https://api.whatsapp.com/send?phone=6283805555280");
       // window.open("https://api.whatsapp.com/send?phone=6283805555280&text=nama%3A"+$('#name').val()+"%20%0Asurname%3A"+$('#surname').val()+"%0Aemail%3A"+$('#email').val()+"%0Apesan%3A"+$('#pesan').val())
     }
     function toForm() {
       //window.open("https://bit.ly/ngelab_form");
-	window.open("https://bit.ly/form_ngelabv2");
+	  window.open("https://bit.ly/form_ngelabv2");
+	  //myFunction();
     }
 
   // Acc
@@ -824,5 +850,63 @@ https://templatemo.com/tm-565-onix-digital -->
         }
     });
   </script>
+  
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
+  import { getDatabase, ref, set, onValue, update, remove } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-database.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCMt_sOODzxT16jmoEa3bX5qdamkGpyms8",
+    authDomain: "landing-1f21a.firebaseapp.com",
+    databaseURL: "https://landing-1f21a-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "landing-1f21a",
+    storageBucket: "landing-1f21a.appspot.com",
+    messagingSenderId: "99058740736",
+    appId: "1:99058740736:web:6d58ca14664e106424f2e5",
+    measurementId: "G-M22QRL1548"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const database = getDatabase(app);
+  
+  function myFunction() {
+	  // Get the snackbar DIV
+	  var x = document.getElementById("snackbar");
+
+	  // Add the "show" class to DIV
+	  x.className = "show";
+
+	  // After 3 seconds, remove the show class from DIV
+	  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+	} 
+  
+  JoinUs2.addEventListener('click',(e) => {
+	console.log("coba")
+    var nama = document.getElementById('inputFieldNama').value;
+    var email = document.getElementById('inputFieldEmail').value;
+    var saran = document.getElementById('exampleFormControlTextarea6').value;
+	console.log("email "+email+"nama "+nama+"saran "+saran)
+
+    set(ref(database, 'users/' + nama), {
+
+	 username: nama,
+     email: email,
+     password : saran
+
+     });
+
+    //myFunction();
+	alert('saved');
+    });
+  
+</script>
 </body>
 </html>

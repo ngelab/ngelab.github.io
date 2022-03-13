@@ -713,11 +713,9 @@ https://templatemo.com/tm-565-onix-digital -->
                    
 		  		<!--<button id="form-submit" class="btn btn-primary btn-lg btn3d" style="background-color: #1DACE2;color:white;border-radius: 1.1em;padding: 8px 20px;border: none;font-weight: 400;font-size: 30px;" onclick=""><b>Join Us</b></button>-->
 				<div id="snackbar">Disimpan. Terima Kasih :)</div>
-				<div  id="JoinUs" class="btn btn-primary btn-lg btn3d" style="background-color: #1DACE2;color:white;border-radius: 1.1em;padding: 8px 20px;border: none;font-weight: 400;font-size: 30px;" onclick="">
+				<div  id="JoinUs3" class="btn btn-primary btn-lg btn3d" style="background-color: #1DACE2;color:white;border-radius: 1.1em;padding: 8px 20px;border: none;font-weight: 400;font-size: 30px;" onclick="">
                       <b>Join Us</b>
                 </div>
-				<input type="submit" id="JoinUs2" name="signup_submit" value="Delete" />
-                	`     
                 		</fieldset>
     				</div>
   			<div class="col"><img src="assets/images/click-here-arrow-reverse.png" alt="ngelab"></div>
@@ -877,9 +875,11 @@ https://templatemo.com/tm-565-onix-digital -->
   const analytics = getAnalytics(app);
   const database = getDatabase(app);
   
-  function myFunction() {
+  function myFunction(input) {
+	console.log(input)
 	  // Get the snackbar DIV
 	  var x = document.getElementById("snackbar");
+	  document.getElementById('snackbar').innerHTML = input;
 
 	  // Add the "show" class to DIV
 	  x.className = "show";
@@ -888,23 +888,43 @@ https://templatemo.com/tm-565-onix-digital -->
 	  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 	} 
   
-  JoinUs2.addEventListener('click',(e) => {
+  JoinUs3.addEventListener('click',(e) => {
 	console.log("coba")
     var nama = document.getElementById('inputFieldNama').value;
     var email = document.getElementById('inputFieldEmail').value;
     var saran = document.getElementById('exampleFormControlTextarea6').value;
+	
+	var today = new Date();
+	var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+	var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+	var dateTime = date+' '+time;
+	console.log(dateTime)
+	var refEmail = email.replace(/\./g,'');
 	console.log("email "+email+"nama "+nama+"saran "+saran)
+	
+	if(nama==''){
+		console.log('nama kosong')
+		myFunction("Nama tidak boleh kosong!!!!");
+	}else if(email==''){
+		console.log('nama kosong')
+		myFunction("Email tidak boleh kosong!!!!");
+	}else{
+		set(ref(database, 'emails/' + refEmail), {
+		 id: refEmail,
+		 nama: nama,
+		 email: email,
+		 saran : saran,
+		 tglBuat : dateTime,
+		 });
 
-    set(ref(database, 'users/' + nama), {
-
-	 username: nama,
-     email: email,
-     password : saran
-
-     });
-
-    //myFunction();
-	alert('saved');
+		//myFunction();
+		//alert('saved');
+		
+		document.getElementById('inputFieldNama').value = '';
+		document.getElementById('inputFieldEmail').value = '';
+		document.getElementById('exampleFormControlTextarea6').value = '';
+		myFunction("Tersimpan, terima kasih :)");
+	}
     });
   
 </script>

@@ -25,6 +25,15 @@
     <link rel="stylesheet" href="assets/css/btn3d.css">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/toast.css">
+	
+	<!-- Lunar CSS -->
+    <link rel="stylesheet" href="assets/css/lunar.css">
+    <link rel="stylesheet" href="assets/css/demo.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700,800,900" rel="stylesheet">
+    
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -808,8 +817,80 @@ https://templatemo.com/tm-565-onix-digital -->
       </div>
     </div>
   </footer>
+  
+  <!-- Modal -->
+    <div class="modal fade auto-off"  id="demoModal"  tabindex="-1" role="dialog"
+         aria-labelledby="demoModal" aria-hidden="true">
+        <div class="modal-dialog animated zoomInDown modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="container-fluid">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="row">
+                        <div class="col-md-12 m-h-50 bg-img rounded-left" style="background-image: url('assets/img/about-left-image.png')">
+
+                        </div>
+                        <div class="col-md-12 text-center py-5 px-sm-5 ">
+
+                            <h2>Download E-book Lab</h2>
+                            <p class="text-muted">
+                                E-book laboratorium dan jenis layanan
+                            </p>
+                            <form>
 
 
+                                <button type="submit" class="btn btn-cstm-dark btn-block btn-cta" data-dismiss="modal" data-toggle="modal" data-target="#demoModal2" aria-label="Close">Download</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Ends -->
+	
+	<!-- Modal2 -->
+<div class="modal fade auto-off "  id="demoModal2"  tabindex="-1" role="dialog"
+     aria-labelledby="demoModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered  modal-lg  " role="document">
+        <div class="modal-content">
+
+            <div class="container-fluid">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="row">
+                    <div class="col-md-6 bg-img rounded-left m-h-60 d-none d-sm-block" style="background-image: url('https://images.unsplash.com/photo-1538943963832-856b555cd29b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80')">
+
+                    </div>
+                    <div class="col-md-6 py-5 px-sm-5 my-auto ">
+
+                        <h2 class="pt-sm-3">Join our Mailing List</h2>
+                        <p class="text-muted">
+                            Isi email Anda untuk mendownload e-book
+                        </p>
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+
+                            <button type="submit" class="btn btn-cstm-dark btn-block btn-cta" data-dismiss="modal" aria-label="Close">Download Sekarang</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal2 Ends -->
+
+	<div id="image"></div>
   <!-- Scripts -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -817,6 +898,17 @@ https://templatemo.com/tm-565-onix-digital -->
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
+  
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/lunar.js"></script>
+  <script src="assets/js/demo.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  
+  <script type="text/javascript">
+    $(window).on('load', function() {
+        $('#demoModal').modal('show');
+    });
+</script>
 
   <script>
   
